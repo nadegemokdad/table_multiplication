@@ -1,29 +1,23 @@
 <?php
-// declaration de session 
-session_start();
-$result;
+
+session_start(); // declaration de session 
+
 if (isset($_POST["table"])) { //verif de la variable $_POST["table"]
     $_SESSION["table"]  = $_POST["table"]; //garde la variable $_POST ds la session
 };
-if(isset($_POST["reponse"])) {
-    for ($i=1; $i <16 ; $i++) {
-        $_SESSION['randomn'.$i] = rand(1,15); 
-    
-    $result = $_SESSION["table"] * $_SESSION["randomn".$i];
-        echo $result;
+
+if(isset($_POST["reponse"])) { // on teste si on a répondu ou pas
+    if(isset($_SESSION['random'])){
+        if($_SESSION['random'] * $_SESSION['table'] == $_POST['reponse']){
+            $result = "VRAI";
+        }
+        else {
+            $result = "FAUX";
+        }
     }
+};
 
-var_dump($_SESSION["random_table"]);
-
-var_dump($result);
-if ($_POST["input"] == $result ) {
-   echo "youpi";
-   
-}
-else {
-    echo "raté";
-}
-}
+$_SESSION['random'] = rand(1,15);
 
 ?>
 <!DOCTYPE html>
@@ -53,23 +47,28 @@ else {
         </div>
         <div class="row">
             <?php
-     
-                echo $_SESSION["table"] ." x " . $_SESSION["randomn1"] . " = "  ;
-               
-
-           
-            
+                echo $_SESSION["table"] ." x " . $_SESSION["random"] . " = "  ;
             ?>
         </div>
         <div class="row">
         <form action="revisions.php" method="post">
             <label for="resultat"> Réponse : </label>
-            <input type="number" name="input" id="resultat">
-            <input type="submit" name = "reponse">
-      
+            <input type="number" name="reponse" id="resultat">
+            <input type="submit" value="Valider">
         </form>
-             
+
+           
+        
         </div>
+        <div class="row">
+           <div id="reponse">
+            <?php if(isset($result)){ 
+                echo $result; 
+                };
+            ?>
+        </div> 
+        </div>
+           
     </div>
 </body>
 
