@@ -12,7 +12,7 @@
 <body>
     <div class="container">
         <div class="row justify-content-center">
-            <img src="" alt="">
+            <img src="img/abacus.png" alt="logo">
 
         </div>
         <div class="row justify-content-center">

@@ -51,13 +51,12 @@
                 if (isset($_POST["table"])) { // verifie la presence de la variable "post[table]
                     $table = $_POST["table"];
                     $result;
-    
-                    for ($i = 1; $i < 16; $i++) {// si variable présente, alors il execute for et affiche le resultat
+
+                    for ($i = 1; $i < 16; $i++) { // si variable présente, alors il execute for et affiche le resultat
                         $result = $table * $i;
-    
+
                         echo  $table . "x" . $i . " = " . $result . "<br>";
-                    }  
-             
+                    }
                 }
                 ?>
             </div>
