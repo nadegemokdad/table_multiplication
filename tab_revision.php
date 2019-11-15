@@ -13,18 +13,20 @@
 <body>
     <div class="container">
         <div class="row justify-content-center">
-        <img src="img/abacus.png" alt="logo">
+            <img src="img/abacus.png" alt="logo">
 
         </div>
         <div class="row justify-content-center">
-            <h1> Slogan</h1>
-
+            <h1 class="sloganp3">"Un mathématicien est un aveugle qui, dans une pièce sombre, cherche un chat noir qui n’y est pas."'</h1>
+        </div>
+        <div class="row justify-content-center">
+            <p class="auteur">Charles Darwin</p>
         </div>
         <div class="row justify-content-center retour">
-            <a href="index.php"><button type="button" class="btn btn-info btn-block" >Retour</button></a>
+            <a href="index.php"><button type="button" class="btn btn-info btn-block">Retour</button></a>
         </div>
         <div class="row align-items-center">
-        <label for="table" class="choixtab"> Choisissez une table de multiplication à réviser : </label>
+            <label for="table" class="choixtab"> Choisissez une table de multiplication à réviser : </label>
             <form action="revisions.php" method="post">
                 <select class="select" name="table" id="table">
                     <option value="1">1</option>
@@ -43,7 +45,7 @@
                     <option value="14">14</option>
                     <option value="15">15</option>
                 </select>
-                <input type="submit" class="btn button_tab" value="Envoyer" >
+                <input type="submit" class="btn button_tab" value="Envoyer">
             </form>
         </div>
 </body>

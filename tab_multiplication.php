@@ -14,19 +14,22 @@
 
     <div class="container">
         <div class="row justify-content-center">
-        <img src="img/abacus.png" alt="logo">
+            <img src="img/abacus.png" alt="logo">
 
         </div>
         <div class="row justify-content-center">
-            <h1> Notre slogan </h1>
+            <h1 class="sloganp2">"Les mathématiques consistent à prouver une chose évidente par des moyens complexes."</h1>
+        </div>
+        <div class="row justify-content-center">
+            <p class="auteur">Georges Polya.</p>
         </div>
         <div class="row justify-content-center retour">
-            <a href="index.php"><button type="button" class="btn btn-info" >Retour</button></a>
+            <a href="index.php"><button type="button" class="btn btn-info">Retour</button></a>
         </div>
         <div class="row align-items-center">
             <label for="table" class="choixtab"> Choisissez une table de multiplication : </label>
             <form action="tab_multiplication.php" method="post">
-                <select  class="select" name="table" id="table">
+                <select class="select" name="table" id="table">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -45,26 +48,26 @@
                 </select>
                 <input class="btn button_tab" type="submit" value="Envoyer">
             </form>
-            </div>
-            <div class="row justify-content-start mx-auto result">
-                <!-- <div class="col"> -->
-                    <?php
-                    //test de la variable post
-                    if (isset($_POST["table"])) { // verifie la presence de la variable "post[table]
-                        $table = $_POST["table"];
-                        $result;
+        </div>
+        <div class="row justify-content-start mx-auto result">
+            <!-- <div class="col"> -->
+            <?php
+            //test de la variable post
+            if (isset($_POST["table"])) { // verifie la presence de la variable "post[table]
+                $table = $_POST["table"];
+                $result;
 
-                        for ($i = 1; $i < 16; $i++) { // si variable présente, alors il execute for et affiche le resultat
-                            $result = $table * $i; ?>
+                for ($i = 1; $i < 16; $i++) { // si variable présente, alors il execute for et affiche le resultat
+                    $result = $table * $i; ?>
 
-                        <p class="tabmultiple"><?php echo $table ?> X <?php echo $i ?> = <?php echo $result ?> </p><br>
+                    <p class="tabmultiple"><?php echo $table ?> X <?php echo $i ?> = <?php echo $result ?> </p><br>
 
-                        <?php
-                        }
-                    }
-                    ?>
-                <!-- </div> -->
-            </div>
+            <?php
+                }
+            }
+            ?>
+            <!-- </div> -->
+        </div>
     </div>
 </body>
 

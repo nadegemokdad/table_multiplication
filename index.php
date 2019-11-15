@@ -14,10 +14,12 @@
     <div class="container">
         <div class="row justify-content-center">
             <img src="img/abacus.png" alt="logo">
-
         </div>
         <div class="row justify-content-center">
-        <h1 class="sloganp1">“En mathématiques, on ne comprend pas les choses, on s’y habitue.”</h1>
+            <h1 class="sloganp1">“En mathématiques, on ne comprend pas les choses, on s’y habitue.”</h1>
+        </div>
+        <div class="row justify-content-center">
+            <p class="auteur">John Von Neuman</p>
         </div>
         <div class="row justify-content-center">
             <a href="tab_multiplication.php"><button type="button" class="btn btn-lg mb-2 button_all">Tables de Multiplication</button></a>
@@ -25,6 +27,7 @@
         <div class="row justify-content-center">
             <a href="tab_revision.php"><button type="button" class="btn btn-secondary btn-lg mt-2">Révision</button></a>
         </div>
+    </div>
 </body>
 
 </html>

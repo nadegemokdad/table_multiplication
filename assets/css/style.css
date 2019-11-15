@@ -97,9 +97,14 @@ body {
     background-color: #1A91A1;
 }
 
-.sloganp1 {
+.sloganp1,.sloganp2, .sloganp3, .sloganp4  {
     font-size: 2rem;
     padding-bottom: 20px;
+}
+
+.auteur {
+font-size: 1rem;
+
 }
 
 .reponserev {
