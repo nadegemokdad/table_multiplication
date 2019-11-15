@@ -9,10 +9,10 @@ if (isset($_POST["table"])) { //verif de la variable $_POST["table"]
 if(isset($_POST["reponse"])) { // on teste si on a répondu ou pas
     if(isset($_SESSION['random'])){
         if($_SESSION['random'] * $_SESSION['table'] == $_POST['reponse']){
-            $result = "VRAI";
+            $result = ' <p class="gagne">Gagné</p><p class="gagne2">la réponse était ' . $_POST["reponse"] . '</p>';
         }
         else {
-            $result = "FAUX";
+            $result = '<p class="perdu">Perdu</p><p class="perdu2"> la réponse était ' . $_POST["reponse"] . '</p>';
         }
     }
 };
@@ -29,42 +29,39 @@ $_SESSION['random'] = rand(1,15);
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Table de multiplication</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
     <div class="container">
         <div class="row justify-content-center">
-            <img src="" alt="">
+        <img src="img/abacus.png" alt="logo">
 
         </div>
         <div class="row justify-content-center">
 
         </div>
         <div class="row justify-content-center">
-            <a type="button" class="btn btn-primary col-6" href="tab_revision.php">Tables</a>
-            <a type="button" class="btn btn-success col-6" href="index.php">Retour accueil</a>
-
+            <a href="tab_revision.php"><button type="button" class="btn btn-lg mb-2 button_color">Tables</button></a>
+        </div>
+        <div class="row justify-content-center">
+            <a href="index.php"><button type="button" class="btn btn-lg mt-2 button_color" >Retour accueil</button></a>
         </div>
         <div class="row">
-            <?php
-                echo $_SESSION["table"] ." x " . $_SESSION["random"] . " = "  ;
-            ?>
+           <p class="reponserev"> <?php echo $_SESSION["table"] ?> X <?php echo $_SESSION["random"] ?> = </p>
         </div>
-        <div class="row">
+        <div class="row align-items-center">
         <form action="revisions.php" method="post">
-            <label for="resultat"> Réponse : </label>
+            <label for="resultat" class="replab" > Réponse : </label>
             <input type="number" name="reponse" id="resultat">
-            <input type="submit" value="Valider">
+            <input type="submit" class="btn button_tab" value="Envoyer">
         </form>
-
-           
-        
         </div>
         <div class="row">
            <div id="reponse">
             <?php if(isset($result)){ 
-                echo $result; 
-                };
+            echo $result; 
+            };
             ?>
         </div> 
         </div>

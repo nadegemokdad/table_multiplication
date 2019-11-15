@@ -1,0 +1,135 @@
+a:hover {
+    text-decoration: none;
+    
+}
+
+/*Réinitilaisation de la liste déroulante*/
+select {
+    outline: 0;
+    border: 0 !important;
+    background: #F9F9F9;
+    background-image: none;
+    box-shadow: none;
+    font-size: 1.2em;
+  }
+  
+  
+  /* Mise en forme de la div .select*/
+  .select {
+    width: 350px;
+    height: 45px;
+    overflow: hidden;
+    border-radius: 5px;
+    border: 1px solid #CED4DA;
+  }
+  
+  /* Mise en forme de la balise select*/
+  select {
+    width: 100%;
+    margin: 0;
+    padding-left: 15px;
+    color: #555555;
+    cursor: pointer;
+  }
+  
+ 
+  
+  .select:hover::after {
+    color: #FA6141;
+  }
+
+
+.container {
+    padding-top: 55px;
+    padding-bottom: 55px;
+}
+
+.retour {
+    padding: 20px;
+}
+
+
+label.choixtab {
+    font-size: 1.1rem;
+    padding-right: 5px;
+}
+
+form .button_tab {
+    margin-bottom: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.233);
+    box-sizing: border-box;
+    background-color: rgb(255, 77, 82);
+    color: white;
+}
+
+.result {
+    margin-top: 70px;
+    padding: 10px;
+    line-height: 1rem;
+    font-size: 2rem;
+    display: block;
+}
+
+div button.button_color {
+   border: 1px solid rgba(0, 0, 0, 0.233);
+   box-sizing: border-box;
+   background-color: #ABD2FA;
+}
+
+div button.button_color:hover {
+    border: 1px solid rgba(0, 0, 0, 0.233);
+    box-sizing: border-box;
+    background-color: #ABD2FA;
+}
+
+div button.button_all {
+    background-color: #BEB7A4;
+    color: white;
+}
+
+div button.button_all:hover {
+    background-color: #BEB7A4;
+    color: white;
+}
+
+
+body {
+    background-color: #1A91A1;
+}
+
+.sloganp1 {
+    font-size: 2rem;
+    padding-bottom: 20px;
+}
+
+.reponserev {
+    font-size: 1.6rem;
+    padding-bottom: 20px;
+}
+
+.replab {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.gagne {
+    font-size: 1.6rem;
+    margin-top: 20px;
+    color: rgb(34, 255, 34);
+}
+
+.gagne2 {
+    font-size: 1.6rem;
+    margin-top: 20px;
+}
+
+.perdu {
+    font-size: 1.6rem;
+    margin-top: 20px;
+    color: rgb(180, 1, 7);
+}
+
+.perdu2 {
+    font-size: 1.6rem;
+    margin-top: 20px;
+}
